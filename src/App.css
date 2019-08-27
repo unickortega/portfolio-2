@@ -1,33 +1,143 @@
-.App {
+.side-navigation{
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  z-index: 1001;
+}
+
+.side-navigation ul.dot-edicator{
+  list-style: none;
+  padding: 0px;
+}
+
+.side-navigation ul.dot-edicator li a{
+  padding: 10px;
+  display: block;
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+
+.side-navigation ul.dot-edicator li a::before {
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  background: #757575;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 200ms ease all;
+}
+
+.side-navigation ul.dot-edicator .active a::before{
+  height: 20px;
+  width: 20px;
+}
+
+.side-navigation ul.dot-edicator li a span{
+  background: gray;
+  color: white;
+  position: absolute;
+  right: 100%;
+  padding: 0 10px;
+  display: none;
+}
+
+#header
+{
+  min-height: 100vh;
+  background: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .header-text{
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#header .header-text .name
+{
+  font-size: 50px;
+  padding: 0 50px;
 }
 
-.App-header {
-  background-color: #282c34;
+#header .header-text .divider{
+  position: relative;
+  height: 5px;
+  background: #cccccc;
+  margin: 15px 0;
+}
+
+#header .header-text .divider .fas{
+  padding: 0 10px;
+  color: #0c0c0c;
+  background: rgb(233, 233, 233);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#header .header-text .qualifications{
+  font-size: 20px;
+  text-align: center;
+  color: #555555;
+  line-height: 30px;
+}
+
+#about{
   min-height: 100vh;
+  background: #f4f4f4;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#skills{
+  min-height: 100vh;
+  background: rgb(233, 233, 233);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skill-table{
+  display: table;
+}
+
+.skill-table .skill-row{
+  display: table-row;
+}
+
+.skill-table .skill-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.skill-table .skill-cell .skill-mastery{
+  height: 30px;
+  background-image: linear-gradient(to right, #b1aeac , #3a2e2d);
+}
+
+/* Footer --------------------------------- */
+#footer {
+  background: white;
+}
+
+.media-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.media-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
